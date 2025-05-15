@@ -1,0 +1,29 @@
+{
+  "orderNumber": "c58947d7-57c0-4626-935f-c855cb1292ba",
+  "user": "user-01",
+  "items": [
+    {
+      "code": "P100",
+      "name": "Product 1",
+      "price": 34.0,
+      "quantity": 1
+    }
+  ],
+  "customer": {
+    "name": "dewi",
+    "email": "dewi@email.com",
+    "phone": "09987"
+  },
+  "deliveryAddress": {
+    "addressLine1": "jalan1",
+    "addressLine2": "jalan2",
+    "city": "magelang",
+    "state": "bandung",
+    "zipCode": "9987",
+    "country": "IDN"
+  },
+  "status": "DELIVERED",
+  "comments": null,
+  "createdAt": null,
+  "totalAmount": 34.0
+}

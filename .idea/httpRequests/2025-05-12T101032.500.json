@@ -1,0 +1,10 @@
+{
+  "type": "https://api.bookstore.com/errors/server-error",
+  "title": "Internal Server Error",
+  "status": 500,
+  "detail": "could not extract ResultSet [ERROR: relation \"order_event_id_generator\" does not exist\n  Position: 16] [select nextval('order_event_id_generator')]; SQL [select nextval('order_event_id_generator')]",
+  "instance": "/api/orders",
+  "service": "order-service",
+  "error_category": "Generic",
+  "timestamp": "2025-05-12T03:10:32.385637700Z"
+}

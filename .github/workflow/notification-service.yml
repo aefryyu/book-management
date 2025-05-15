@@ -1,0 +1,42 @@
+name: 'notification-service'
+
+on:
+  push:
+    paths:
+      - notification-service/**
+    branches:
+      - "**"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./notification-service
+      DOCKER_IMAGE_NAME: ${{secrets.DOCKERHUB_USERNAME}}/book-management-notification-service
+    defaults:
+      run:
+        working_directory: ${{env.working-directory}}
+      steps:
+        - uses: actions/checkout@v4
+
+        - name: Setup Java 21
+          uses: actions/setup-java@v4
+          with:
+            java-version: '21'
+            distribution: 'temurin'
+            cache: 'maven'
+
+        - name: Make Maven
+          run: ./mvnw -ntp verify
+
+        - name: Login to Dockerhub
+          uses: docker/login-action@v4
+          with:
+            username: ${{secrets.DOCKERHUB_USERNAME}}
+            password: ${{secrets.DOCKERHUB_TOKEN}}
+
+        - name: Build and Publish Docker Image
+          run: |
+            ./mvnw spring-boot:build-image -DskipTests -Dspring-boot.build-image.imageName=$DOCKER_IMAGE_NAME
+            docker push $DOCKER_IMAGE_NAME

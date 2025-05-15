@@ -1,0 +1,10 @@
+{
+  "type": "https://api.bookstore.com/errors/server-error",
+  "title": "Internal Server Error",
+  "status": 500,
+  "detail": "Cannot invoke \"Object.getClass()\" because \"objectToConvert\" is null",
+  "instance": "/api/orders/send",
+  "service": "order-service",
+  "error_category": "Generic",
+  "timestamp": "2025-05-04T07:27:30.816126800Z"
+}

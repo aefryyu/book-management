@@ -1,0 +1,10 @@
+{
+  "type": "https://api.bookstore.com/errors/not-found",
+  "title": "Product Not Found",
+  "status": 404,
+  "detail": "Product with code P110009 not found",
+  "instance": "/api/products/P110009",
+  "service": "catalog-service",
+  "error_category": "Generic",
+  "timestamp": "2025-05-01T03:14:05.301984418Z"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "https://api.bookstore.com/errors/server-error",
+  "title": "Internal Server Error",
+  "status": 500,
+  "detail": "java.lang.StackOverflowError",
+  "instance": "/api/orders",
+  "service": "order-service",
+  "error_category": "Generic",
+  "timestamp": "2025-05-08T20:21:03.809495600Z"
+}
