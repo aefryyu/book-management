@@ -1,3 +1,86 @@
+POST http://localhost:8082/api/orders
+Content-Type: application/json
+Content-Length: 394
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=3B3FC8E6F0C537CF6A302F28A67253FB
+
+{
+  "customer": {
+    "name": "dummy",
+    "email": "dummy@email.com",
+    "phone": "09987"
+  },
+  "deliveryAddress": {
+    "addressLine1": "jalan1",
+    "addressLine2": "jalan2",
+    "city": "jakarta",
+    "state": "state",
+    "zipCode": "9987",
+    "country": "IDN"
+  },
+  "items": [
+    {
+      "code": "P100",
+      "name": "Product 1",
+      "price": 34.0,
+      "quantity": 1
+    }
+  ]
+}
+
+<> 2025-05-17T124431.201.json
+
+###
+
+GET http://localhost:8082/api/orders
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=3B3FC8E6F0C537CF6A302F28A67253FB
+content-length: 0
+
+<> 2025-05-17T084605.200.json
+
+###
+
+POST http://localhost:8082/api/orders
+Content-Type: application/json
+Content-Length: 394
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=3B3FC8E6F0C537CF6A302F28A67253FB
+
+{
+  "customer": {
+    "name": "dummy",
+    "email": "dummy@email.com",
+    "phone": "09987"
+  },
+  "deliveryAddress": {
+    "addressLine1": "jalan1",
+    "addressLine2": "jalan2",
+    "city": "jakarta",
+    "state": "state",
+    "zipCode": "9987",
+    "country": "IDN"
+  },
+  "items": [
+    {
+      "code": "P100",
+      "name": "Product 1",
+      "price": 34.0,
+      "quantity": 1
+    }
+  ]
+}
+
+<> 2025-05-17T084503.201.json
+
+###
+
 GET http://localhost:8082/api/orders
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
 Accept-Encoding: br, deflate, gzip, x-gzip
@@ -1294,36 +1377,6 @@ Accept: */*
 content-length: 0
 
 <> 2025-05-01T101358.200.json
-
-###
-
-GET http://localhost:8081/api/products
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-05-01T101302.200.json
-
-###
-
-GET http://localhost:8081/api/products?page=1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-05-01T101252.200.json
-
-###
-
-GET http://localhost:8081/api/products?pahe=1
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-05-01T101242.200.json
 
 ###
 

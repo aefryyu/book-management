@@ -43,7 +43,7 @@ public class OrderEventService {
 
         orderEventEntity.setPayload(toJsonPayload(event));
         this.orderEventRepository.save(orderEventEntity);
-        orderEventPublisher.publish(event);
+//        orderEventPublisher.publish(event);
     }
 
     void save(OrderDeliveredEvent event) {

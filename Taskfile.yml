@@ -6,32 +6,32 @@ vars:
   DC_DIR: "deployment/docker-compose"
   INFRA_DC_FILE: "{{.DC_DIR}}/infra.yml"
   APPS_DC_FILE: "{{.DC_DIR}}/apps.yml"
-
+  SHELL_CMD: '{{if eq .GOOS "windows"}}cmd /c{{else}}sh -c{{end}}'
 
 tasks:
   default:
     cmds:
       - task: test
+
   test:
-    deps: [ format ]
+    deps: [format]
     cmds:
-      - cmd /c {{.MVNW}} clean test
+      - "{{.SHELL_CMD}} '{{.MVNW}} clean test'"
 
   format:
     cmds:
-       - cmd /c {{.MVNW}} spotless:apply
+      - "{{.SHELL_CMD}} '{{.MVNW}} spotless:apply'"
 
   build:
     cmds:
-      - cmd /c {{.MVNW}} -pl catalog-service spring-boot:build-image -DskipTests
-      - cmd /c {{.MVNW}} -pl order-service spring-boot:build-image -DskipTests
-      - cmd /c {{.MVNW}} -pl notification-service spring-boot:build-image -DskipTests
+      - "{{.SHELL_CMD}} '{{.MVNW}} -pl catalog-service spring-boot:build-image -DskipTests'"
+      - "{{.SHELL_CMD}} '{{.MVNW}} -pl order-service spring-boot:build-image -DskipTests'"
+      - "{{.SHELL_CMD}} '{{.MVNW}} -pl notification-service spring-boot:build-image -DskipTests'"
 
   start:
     deps: [build]
     cmds:
       - docker compose -f "{{.INFRA_DC_FILE}}" -f "{{.APPS_DC_FILE}}" up -d
-#      - docker compose -f deployment/docker-compose/infra.yml up -d
 
   stop:
     cmds:
@@ -54,4 +54,3 @@ tasks:
         {{else}}
         sleep {{.DURATION}}
         {{end}}
-  

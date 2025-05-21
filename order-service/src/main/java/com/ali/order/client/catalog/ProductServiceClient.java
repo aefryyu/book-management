@@ -3,7 +3,6 @@ package com.ali.order.client.catalog;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
 import java.util.Optional;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -13,7 +12,7 @@ import org.springframework.web.client.RestClient;
 public class ProductServiceClient {
 
     private final RestClient restClient;
-    private final static Logger log = LoggerFactory.getLogger(ProductServiceClient.class);
+    private static final Logger log = LoggerFactory.getLogger(ProductServiceClient.class);
 
     public ProductServiceClient(RestClient restClient) {
         this.restClient = restClient;

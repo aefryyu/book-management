@@ -3,8 +3,8 @@ Content-Type: application/json
 
 {
   "customer": {
-    "name": "dewi",
-    "email": "dewi@email.com",
+    "name": "dummy",
+    "email": "dummy@email.com",
     "phone": "09987"
   },
   "deliveryAddress": {

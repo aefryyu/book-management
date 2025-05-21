@@ -105,7 +105,7 @@ public class NotificationService {
             MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, "utf-8");
             helper.setFrom(properties.supportEmail());
             helper.setTo(recipient);
-            helper.setText(content, false);
+            helper.setText(content);
             helper.setSubject(subject);
             emailSender.send(mimeMessage);
             log.info("Email sent to {} with subject {}", recipient, subject);

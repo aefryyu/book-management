@@ -2,8 +2,6 @@ package com.ali.notifications.config;
 
 import com.ali.notifications.ApplicationProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -20,9 +18,8 @@ public class RabbitMQConfig {
     public RabbitMQConfig(ApplicationProperties properties, ObjectMapper objectMapper) {
         this.properties = properties;
         this.objectMapper = objectMapper;
-        this.objectMapper.registerModule(new JavaTimeModule());
-        this.objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
+
     @Bean
     DirectExchange exchange() {
         return new DirectExchange(properties.orderEventExchange());

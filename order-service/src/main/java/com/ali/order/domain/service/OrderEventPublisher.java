@@ -5,7 +5,6 @@ import com.ali.order.domain.event.OrderCanceledEvent;
 import com.ali.order.domain.event.OrderCreatedEvent;
 import com.ali.order.domain.event.OrderDeliveredEvent;
 import com.ali.order.domain.event.OrderErrorEvent;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,10 +17,12 @@ public class OrderEventPublisher {
     private static final Logger log = LoggerFactory.getLogger(OrderEventPublisher.class);
     private final ApplicationProperties properties;
     private final RabbitTemplate rabbitTemplate;
+    private final ObjectMapper objectMapper;
 
-    public OrderEventPublisher(ApplicationProperties properties, RabbitTemplate rabbitTemplate) {
+    public OrderEventPublisher(ApplicationProperties properties, RabbitTemplate rabbitTemplate, ObjectMapper objectMapper) {
         this.properties = properties;
         this.rabbitTemplate = rabbitTemplate;
+        this.objectMapper = objectMapper;
     }
 
     public void publish(OrderCreatedEvent event) {
@@ -42,16 +43,18 @@ public class OrderEventPublisher {
 
     private void send(String routingKey, Object payload) {
         try {
-            String jsonPayload = new ObjectMapper().writeValueAsString(payload);
+            String jsonPayload = objectMapper.writeValueAsString(payload);
+
             log.info(
-                    "SENDING to exchange [{}] with routingKey [{}]: {}",
+                    "Publishing to exchange '{}' with routing key '{}': {}",
                     properties.orderEventExchange(),
                     routingKey,
                     jsonPayload);
-            rabbitTemplate.convertAndSend(properties.orderEventExchange(), routingKey, payload);
-        } catch (JsonProcessingException e) {
-            log.error("ERROR serializing payload: {}", e.getMessage());
-        }
 
+            rabbitTemplate.convertAndSend(properties.orderEventExchange(), routingKey, payload);
+            log.info("Message sent successfully");
+        } catch (Exception e) {
+            log.error("Failed to send message", e);
+        }
     }
 }

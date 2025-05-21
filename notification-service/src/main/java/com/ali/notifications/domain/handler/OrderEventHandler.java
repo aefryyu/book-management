@@ -5,8 +5,8 @@ import com.ali.notifications.domain.event.OrderCanceledEvent;
 import com.ali.notifications.domain.event.OrderCreatedEvent;
 import com.ali.notifications.domain.event.OrderDeliveredEvent;
 import com.ali.notifications.domain.event.OrderErrorEvent;
-import com.ali.notifications.domain.service.NotificationService;
 import com.ali.notifications.domain.repository.OrderEventRepository;
+import com.ali.notifications.domain.service.NotificationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -24,8 +24,8 @@ public class OrderEventHandler {
         this.orderEventRepository = orderEventRepository;
     }
 
-    @RabbitListener(queues = "${notifications.newOrdersQueue}")
-    void handle(OrderCreatedEvent event) {
+    @RabbitListener(queues = "${notifications.new-orders-queue}")
+    void handleCreatedEvent(OrderCreatedEvent event) {
         if (orderEventRepository.existsByEventId(event.eventId())) {
             log.warn("received duplicated orderCreatedEvent with id: {}", event.eventId());
             return;
@@ -36,7 +36,7 @@ public class OrderEventHandler {
         orderEventRepository.save(orderEvent);
     }
 
-    @RabbitListener(queues = "${notifications.deliveredOrdersQueue}")
+    @RabbitListener(queues = "${notifications.delivered-orders-queue}")
     void handle(OrderDeliveredEvent event) {
         if (orderEventRepository.existsByEventId(event.eventId())) {
             log.warn("received duplicated orderDeliveredEvent with id: {}", event.eventId());
@@ -48,7 +48,7 @@ public class OrderEventHandler {
         orderEventRepository.save(orderEvent);
     }
 
-    @RabbitListener(queues = "${notifications.canceledOrdersQueue}")
+    @RabbitListener(queues = "${notifications.canceled-orders-queue}")
     void handle(OrderCanceledEvent event) {
         if (orderEventRepository.existsByEventId(event.eventId())) {
             log.warn("received duplicated orderCanceledEvent with id: {}", event.eventId());
@@ -60,7 +60,7 @@ public class OrderEventHandler {
         orderEventRepository.save(orderEvent);
     }
 
-    @RabbitListener(queues = "${notifications.errorOrdersQueue}")
+    @RabbitListener(queues = "${notifications.error-orders-queue}")
     void handle(OrderErrorEvent event) {
         if (orderEventRepository.existsByEventId(event.eventId())) {
             log.warn("received duplicated orderErrorEvent with id: {}", event.eventId());

@@ -4,6 +4,7 @@ import com.ali.order.ApplicationProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import jakarta.annotation.PostConstruct;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -20,9 +21,8 @@ public class RabbitMQConfig {
     public RabbitMQConfig(ApplicationProperties properties, ObjectMapper objectMapper) {
         this.properties = properties;
         this.objectMapper = objectMapper;
-        this.objectMapper.registerModule(new JavaTimeModule());
-        this.objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
+
     @Bean
     DirectExchange exchange() {
         return new DirectExchange(properties.orderEventExchange());
@@ -34,7 +34,7 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    Binding newOrdersQueueBInding() {
+    Binding newOrdersQueueBinding() {
         return BindingBuilder.bind(newOrdersQueue()).to(exchange()).with(properties.newOrdersQueue());
     }
 
@@ -69,14 +69,17 @@ public class RabbitMQConfig {
     }
 
     @Bean
+    public Jackson2JsonMessageConverter jacksonConverter() {
+        objectMapper.registerModule(new JavaTimeModule());
+        objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+        return new Jackson2JsonMessageConverter(objectMapper);
+    }
+
+    @Bean
     public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
         final var rabbitTemplate = new RabbitTemplate(connectionFactory);
         rabbitTemplate.setMessageConverter(jacksonConverter());
         return rabbitTemplate;
     }
 
-    @Bean
-    public Jackson2JsonMessageConverter jacksonConverter() {
-        return new Jackson2JsonMessageConverter(objectMapper);
-    }
 }

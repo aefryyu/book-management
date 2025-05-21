@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="722823d3-c768-477d-a918-8044c314f837" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-05-01T101242.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-05-01T101252.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-05-01T101302.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taskfile.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Taskfile.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deployment/docker-compose/apps.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/docker-compose/apps.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deployment/docker-compose/infra.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/docker-compose/infra.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/ali/notifications/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ali/notifications/config/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/ali/notifications/domain/handler/OrderEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ali/notifications/domain/handler/OrderEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/ali/notifications/domain/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ali/notifications/domain/service/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/client/catalog/ProductServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/client/catalog/ProductServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/config/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/service/OrderEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/service/OrderEventPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/service/OrderEventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/service/OrderEventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/request/order-service-create-order.http" beforeDir="false" afterPath="$PROJECT_DIR$/request/order-service-create-order.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +110,7 @@
     &quot;Spring Boot.TestcontainersConfiguration.executor&quot;: &quot;Debug&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;add__order__service&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Docker_/book-management/.github/workflow&quot;,
@@ -146,7 +164,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose/infra.yml.book-management-rabbitmq: Compose Deployment">
+  <component name="RunManager" selected="HTTP Request.order-service-get-orders | #1">
     <configuration name="catalog-service | GET request to example server" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request/catalog-service.http" requestIdentifier="GET request to example server" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -214,9 +232,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose/infra.yml.book-management-rabbitmq: Compose Deployment" />
-        <item itemvalue="HTTP Request.order-service-get-orders | #1" />
         <item itemvalue="HTTP Request.order-service-create-order | #1" />
+        <item itemvalue="HTTP Request.order-service-get-orders | #1" />
+        <item itemvalue="Docker.docker-compose/infra.yml.book-management-rabbitmq: Compose Deployment" />
         <item itemvalue="HTTP Request.order-service-get-order-number | #1" />
         <item itemvalue="HTTP Request.catalog-service | GET request to example server" />
       </list>
@@ -250,6 +268,7 @@
       <workItem from="1747266396171" duration="27846000" />
       <workItem from="1747310902285" duration="2838000" />
       <workItem from="1747314174508" duration="744000" />
+      <workItem from="1747369374092" duration="32018000" />
     </task>
     <servers />
   </component>
