@@ -19,7 +19,8 @@ public class OrderEventPublisher {
     private final RabbitTemplate rabbitTemplate;
     private final ObjectMapper objectMapper;
 
-    public OrderEventPublisher(ApplicationProperties properties, RabbitTemplate rabbitTemplate, ObjectMapper objectMapper) {
+    public OrderEventPublisher(
+            ApplicationProperties properties, RabbitTemplate rabbitTemplate, ObjectMapper objectMapper) {
         this.properties = properties;
         this.rabbitTemplate = rabbitTemplate;
         this.objectMapper = objectMapper;

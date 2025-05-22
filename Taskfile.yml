@@ -27,6 +27,7 @@ tasks:
       - "{{.SHELL_CMD}} '{{.MVNW}} -pl catalog-service spring-boot:build-image -DskipTests'"
       - "{{.SHELL_CMD}} '{{.MVNW}} -pl order-service spring-boot:build-image -DskipTests'"
       - "{{.SHELL_CMD}} '{{.MVNW}} -pl notification-service spring-boot:build-image -DskipTests'"
+      - "{{.SHELL_CMD}} '{{.MVNW}} -pl api-gateway spring-boot:build-image -DskipTests'"
 
   start:
     deps: [build]

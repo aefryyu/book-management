@@ -4,7 +4,6 @@ import com.ali.order.ApplicationProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import jakarta.annotation.PostConstruct;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -81,5 +80,4 @@ public class RabbitMQConfig {
         rabbitTemplate.setMessageConverter(jacksonConverter());
         return rabbitTemplate;
     }
-
 }

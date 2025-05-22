@@ -2,7 +2,6 @@ package com.ali.order.domain.entity;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
-import lombok.*;
 
 @Entity
 @Table(name = "order_items")

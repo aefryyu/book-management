@@ -30,7 +30,7 @@
 		<java.version>21</java.version>
 		<dockerImageName>rivaille99/book-management-${artifactId}</dockerImageName>
 		<spotless-maven-plugin.version>2.44.4</spotless-maven-plugin.version>
-		<springdoc-openapi.version>2.5.0</springdoc-openapi.version>
+		<springdoc-openapi.version>2.7.0</springdoc-openapi.version>
 		<wiremock.version>3.13.0</wiremock.version>
 		<wiremock-testcontainers.version>1.0-alpha-15</wiremock-testcontainers.version>
 		<instancio.version>5.4.1</instancio.version>
@@ -76,12 +76,6 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.30</version>
-			<scope>provided</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>

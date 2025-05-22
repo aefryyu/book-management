@@ -6,7 +6,6 @@ import com.ali.order.domain.model.OrderStatus;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
-import lombok.*;
 
 @Entity
 @Table(name = "orders")

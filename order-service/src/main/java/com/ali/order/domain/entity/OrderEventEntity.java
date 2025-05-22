@@ -3,7 +3,6 @@ package com.ali.order.domain.entity;
 import com.ali.order.domain.event.OrderEventType;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
-import lombok.*;
 
 @Entity
 @Table(name = "order_events")
