@@ -5,22 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="722823d3-c768-477d-a918-8044c314f837" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflow/api-gateway.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ali/gateway/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/ApplicationProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/ClientsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/catalog/CatalogServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/catalog/PageResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/catalog/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/orders/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/orders/CreateOrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/orders/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/orders/OrderConfirmationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/orders/OrderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/orders/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/orders/OrderServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/orders/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/clients/orders/OrderSummary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/service/SecurityHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/web/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/java/com/ali/bookwebapp/web/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/static/js/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/static/js/cartStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/static/js/orderDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/static/js/orders.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/static/js/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/templates/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/templates/fragments/pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/templates/oder_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/templates/orders.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-webapp/src/main/resources/templates/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taskfile.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Taskfile.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment/docker-compose/apps.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/docker-compose/apps.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/config/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/entity/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/entity/OrderEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/entity/OrderEventEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/entity/OrderEventEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/entity/OrderItemEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/entity/OrderItemEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/service/OrderEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/service/OrderEventPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/service/OrderEventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/ali/order/domain/service/OrderEventService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +56,10 @@
         <option value="Enum" />
         <option value="Exception" />
         <option value="JUnit5 Test Class" />
-        <option value="Record" />
         <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="Record" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -67,72 +89,81 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2w8TPpqKbCzkBXdVQGPo76fyAgc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Docker.docker-compose/infra.yml.book-management-rabbitmq: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.GET | GET request to example server.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.catalog-service | GET request to example server.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.order-service | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.order-service-create-order | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.order-service-get-order-number | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.order-service-get-orders | #1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CatalogServiceApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderControllerUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.ProductControllerTest.shouldReturnNotFoundWhenProductCodeNotExists.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductControllerTest.shouldReturnProducts.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductRepositoryTest.shouldGetProductByCode.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductRepositoryTest.shouldReturnEmptyWhenCodeNotExist.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.catalog-service [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.order-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.order-service [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.order-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.CatalogServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.TestCatalogServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.TestcontainersConfiguration.executor&quot;: &quot;Debug&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Docker_/book-management/.github/workflow&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Docker.docker-compose/infra.yml.book-management-rabbitmq: Compose Deployment.executor": "Run",
+    "HTTP Request.GET | GET request to example server.executor": "Run",
+    "HTTP Request.catalog-service | GET request to example server.executor": "Run",
+    "HTTP Request.order-service | #1.executor": "Run",
+    "HTTP Request.order-service-create-order | #1.executor": "Run",
+    "HTTP Request.order-service-get-order-number | #1.executor": "Run",
+    "HTTP Request.order-service-get-orders | #1.executor": "Run",
+    "JUnit.CatalogServiceApplicationTests.executor": "Run",
+    "JUnit.OrderControllerTest.executor": "Run",
+    "JUnit.OrderControllerUnitTest.executor": "Run",
+    "JUnit.ProductControllerTest (1).executor": "Run",
+    "JUnit.ProductControllerTest.executor": "Debug",
+    "JUnit.ProductControllerTest.shouldReturnNotFoundWhenProductCodeNotExists.executor": "Run",
+    "JUnit.ProductControllerTest.shouldReturnProducts.executor": "Run",
+    "JUnit.ProductRepositoryTest.executor": "Run",
+    "JUnit.ProductRepositoryTest.shouldGetProductByCode.executor": "Run",
+    "JUnit.ProductRepositoryTest.shouldReturnEmptyWhenCodeNotExist.executor": "Run",
+    "Maven.catalog-service [package].executor": "Run",
+    "Maven.order-service [clean].executor": "Run",
+    "Maven.order-service [compile].executor": "Run",
+    "Maven.order-service [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.BookWebappApplication.executor": "Run",
+    "Spring Boot.CatalogServiceApplication.executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.TestCatalogServiceApplication.executor": "Debug",
+    "Spring Boot.TestcontainersConfiguration.executor": "Debug",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Docker_/book-management/book-webapp/src/main/java/com/ali/bookwebapp/clients/orders",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ali.bookwebapp" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Docker_\book-management\book-webapp\src\main\java\com\ali\bookwebapp\clients\orders" />
+      <recent name="D:\Docker_\book-management\order-service\src\main\java\com\ali\order\domain\dto" />
       <recent name="D:\Docker_\book-management\.github\workflow" />
       <recent name="D:\Docker_\book-management\notification-service\src\main\java\com\ali\notifications\domain\model" />
       <recent name="D:\Docker_\book-management\notification-service\src\main\java\com\ali\notifications\domain\event" />
@@ -149,6 +180,8 @@
       <recent name="com.ali.catalog.web.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ali.bookwebapp.clients.orders" />
+      <recent name="com.ali.bookwebapp.clients.catalog" />
       <recent name="com.ali.notifications.domain.entity" />
       <recent name="com.ali.notifications.config" />
     </key>
@@ -163,7 +196,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.order-service-get-orders | #1">
+  <component name="RunManager" selected="Spring Boot.BookWebappApplication">
     <configuration name="catalog-service | GET request to example server" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request/catalog-service.http" requestIdentifier="GET request to example server" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -179,6 +212,14 @@
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ali.gateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookWebappApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="book-webapp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ali.bookwebapp.BookWebappApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -232,6 +273,7 @@
       <item itemvalue="HTTP Request.order-service-get-order-number | #1" />
       <item itemvalue="HTTP Request.order-service-get-orders | #1" />
       <item itemvalue="HTTP Request.catalog-service | GET request to example server" />
+      <item itemvalue="Spring Boot.BookWebappApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.CatalogServiceApplication" />
@@ -275,7 +317,8 @@
       <workItem from="1747266396171" duration="27846000" />
       <workItem from="1747310902285" duration="2838000" />
       <workItem from="1747314174508" duration="744000" />
-      <workItem from="1747369374092" duration="71514000" />
+      <workItem from="1747369374092" duration="77944000" />
+      <workItem from="1747986803452" duration="22140000" />
     </task>
     <servers />
   </component>

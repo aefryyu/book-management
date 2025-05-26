@@ -28,6 +28,7 @@ tasks:
       - "{{.SHELL_CMD}} '{{.MVNW}} -pl order-service spring-boot:build-image -DskipTests'"
       - "{{.SHELL_CMD}} '{{.MVNW}} -pl notification-service spring-boot:build-image -DskipTests'"
       - "{{.SHELL_CMD}} '{{.MVNW}} -pl api-gateway spring-boot:build-image -DskipTests'"
+      - "{{.SHELL_CMD}} '{{.MVNW}} -pl book-webapp spring-boot:build-image -DskipTests'"
 
   start:
     deps: [build]
@@ -44,6 +45,21 @@ tasks:
       - task: stop
       - task: sleep
       - task: start
+
+  start_monitoring:
+    cmds:
+      - docker compose -f {{.MONITORING_DC_FILE}} up -d
+
+    stop_monitoring:
+      cmds:
+        - docker compose -f {{.MONITORING_DC_FILE}} stop
+        - docker compose -f {{.MONITORING_DC_FILE}} rm -f
+
+    restart_monitoring:
+      cmds:
+        - task: stop_monitoring
+        - task: sleep
+        - task: start_monitoring
 
   sleep:
     vars:

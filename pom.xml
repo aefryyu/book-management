@@ -25,6 +25,7 @@
         <module>order-service</module>
         <module>notification-service</module>
         <module>api-gateway</module>
+        <module>book-webapp</module>
     </modules>
 
     <build>
@@ -48,6 +49,7 @@
                         <phase>compile</phase>
                         <goals>
                             <goal>check</goal>
+                            <goal>apply</goal>
                         </goals>
                     </execution>
                 </executions>
